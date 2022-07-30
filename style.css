@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
   }
   
   li {
@@ -28,11 +28,13 @@ ul {
   }
 
   .profile {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-    width: 100px;
+    overflow: hidden;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    margin: 50px 50px 50px 0px;
   }
 
   .desc{
@@ -40,7 +42,7 @@ ul {
   }
 
   .box{
-    background-color: #333;
+    background-color: black;
     color: antiquewhite;
     }
 .pgimg{
@@ -55,9 +57,27 @@ ul {
     display: inline-block;
 }
 .body{
-    background-color: #f0cfc3;
+    background-color: black;
 }
 .content{
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+p{
+  font-size: 12px;
+  color: white;
+}
+
+.pad{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.gradtext{
+  
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg,#a162e8,#f7ce68 46%,#85ffbd);
+  -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
