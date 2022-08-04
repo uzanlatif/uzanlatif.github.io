@@ -21,6 +21,7 @@ ul {
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
+    color: #a162e8;
   }
 
   .active {
@@ -28,13 +29,13 @@ ul {
   }
 
   .profile {
-    overflow: hidden;
+    /*overflow: hidden;
+    */
     max-width: 200px;
     min-width: 200px;
     max-height: 200px;
     min-height: 200px;
-    border-radius: 50%;
-    margin: 50px 50px 50px 0px;
+    margin: 50px 50px 100px 0px;
   }
 
   .desc{
@@ -42,7 +43,6 @@ ul {
   }
 
   .box{
-    background-color: black;
     color: antiquewhite;
     }
 .pgimg{
@@ -55,9 +55,6 @@ ul {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-}
-.body{
-    background-color: black;
 }
 .content{
     margin-top: 100px;
@@ -80,4 +77,25 @@ p{
   background-image: linear-gradient(43deg,#a162e8,#f7ce68 46%,#85ffbd);
   -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+
+.imgskills{
+  width: 80;
+  margin: 10 10 10 10;
+}
+
+body{
+  background: rgba(0, 0, 0, 0.9) url('img/MazeBg.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+h2{
+  color: white;
+}
+
+.imgContact{
+  width: 30;
 }
