@@ -62,7 +62,7 @@ ul {
 }
 
 p{
-  font-size: 12px;
+  font-size: 16px;
   color: white;
 }
 
@@ -85,7 +85,7 @@ p{
 }
 
 body{
-  background: rgba(0, 0, 0, 0.9) url('img/MazeBg.jpg');
+  background: rgba(0, 0, 0, 0.9) url('img/NewBG.jpg');
   height: 100%;
   background-position: center;
   background-size: cover;
