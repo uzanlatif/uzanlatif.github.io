@@ -62,7 +62,7 @@ ul {
 }
 
 p{
-  font-size: 16px;
+  font-size: 20px;
   color: white;
 }
 
@@ -79,10 +79,6 @@ p{
 -webkit-text-fill-color: transparent;
 }
 
-.imgskills{
-  width: 80;
-  margin: 10 10 10 10;
-}
 
 body{
   background: rgba(0, 0, 0, 0.9) url('img/NewBG.jpg');
@@ -90,6 +86,13 @@ body{
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
+}
+.imgIcon{
+  width: 100px;
+  height: 100px;
+}
+.imgSkills{
+  width: 80px;
 }
 
 h2{
