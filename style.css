@@ -20,11 +20,11 @@ ul {
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #111;
-    color: #a162e8;
+    background-color: white;
+    color: black;
   }
 
-  .active {
+  .actived {
     background-color:#4a454b;
   }
 
@@ -62,7 +62,7 @@ ul {
 }
 
 p{
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 
@@ -102,3 +102,5 @@ h2{
 .imgContact{
   width: 30;
 }
+
+
