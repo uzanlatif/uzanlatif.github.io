@@ -5,186 +5,205 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <body class="body">
+    <body class="body" onload="myFunction()" style="margin:0;">
+      <div id="loader"></div>
 
-        <center>
-            <div name="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="actived"><a href="game.html">Project</a></li>
-                    <li ><a href="prototype.html">Prototype</a></li>
-                  </ul>
-            </div>
-    
-            <div name="Game">
-                <h1  class="box"> Game Development Portofolio </h1>
-                <h2> Finished Project </h2>
-            </div>
-
-        </center>
-
-        <div class="container mb-5"  style="padding-bottom: 100px;">
-
-          <div name="The Snake" class="d-flex align-items-center justify-content-between" >
-            <div class ="profile">
-              <div style="width: 400px" id="snakeControl" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/SnakeZ1.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/SnakeZ2.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#snakeControl" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#snakeControl" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-
-            <div>
-                <h1 style="text-align: right;" class="gradtext"> The Snake</h1> 
-                <p class="tracking-wide leading-relaxed " style=" text-align: right; margin-left: 200px;"> Snake is the common name for a video game concept where the player maneuvers a line which grows in length, with the line itself being a primary obstacle. The concept originated in the 1976 arcade game Blockade, and the ease of implementing Snake has led to hundreds of versions (some of which have the word snake or worm in the title) for many platforms. After a variant was preloaded on Nokia mobile phones in 1998, there was a resurgence of interest in the snake concept as it found a larger audience.</p>
-                <br>
-                <div class="tracking-wide leading-relaxed " style=" text-align: right; margin-left: 200px;">
-                  <a href="" class="btn btn-outline-light">C#</a>
-                  <a href="" class="btn btn-outline-light">2D</a>
-                  <a href="" class="btn btn-outline-light">Unity</a>
-                  <a href="https://github.com/uzanlatif/Snake_Z" class="btn btn-outline-light">Github</a>
-                </div>
-            </div>      
-          </div>
-
-
-
-          <div name="Archery VR" class="content d-flex align-items-center justify-content-between" >
-
-            <div>
-              <h1 class="gradtext"> Jemparingan Archery VR</h1> 
-              <p class="tracking-wide leading-relaxed" style="margin: 0 200 0 0;"> 
-              Use your VR device and be a master. Relax, you cannot die in this game.
-              </p>
-              <br>
-              <div class="tracking-wide leading-relaxed " style=" text-align: left;">
-                <a href="" class="btn btn-outline-light">C#</a>
-                <a href="" class="btn btn-outline-light">VR</a>
-                <a href="" class="btn btn-outline-light">3D</a>
-                <a href="" class="btn btn-outline-light">Unity</a>
-              </div>
-            </div>  
-
-            <div class ="">
-            <div style="width: 400px;" id="JemparinganControl" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/Jemparingan1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Jemparingan2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Jemparingan3.png" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#JemparinganControl" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#JemparinganControl" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            </div>    
-          </div>
-
-         <div name="Starship" class="content d-flex align-items-center justify-content-between" >
-          <div class ="">
-            <div style="width: 400px" id="Starship" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/Starship1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Starship2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Starship3.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#Starship" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#Starship" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div>
-            <h1 style="text-align: right;" class="gradtext"> Starship Battlefield</h1> 
-            <p class="tracking-wide leading-relaxed " style=" text-align: right; margin-left: 200px;"> 
-              Explore galaxy, be the king of galaxy. Shoots aliens. Buy expensive weapons. Be the top of the leaderboards.
-            </p>
-            <br>
-                <div class="tracking-wide leading-relaxed " style=" text-align: right; margin-left: 200px;">
-                  <a href="" class="btn btn-outline-light">C#</a>
-                  <a href="" class="btn btn-outline-light">2D</a>
-                  <a href="" class="btn btn-outline-light">Unity</a>
-                  <a href="https://uzanlatif.itch.io/starship-battlefield" class="btn btn-outline-light">Download</a>
-                </div>
-          </div>     
+        <div class="container animate-bottom" style="padding-bottom: 100px;" id="myDiv">
+          <div name="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="actived"><a href="game.html">Project</a></li>
+                <li ><a href="prototype.html">Prototype</a></li>
+              </ul>
         </div>
 
+        <div name="Game">
+            <h1  class="box"> Game Development Portofolio </h1>
+            <h2> Finished Project </h2>
+        </div>
 
-
-      <div name="Adiwilaga" class="content d-flex align-items-center justify-content-between" >
-
-        <div>
-          <h1 class="gradtext"> Adiwilaga Argani </h1> 
-          <p class="tracking-wide leading-relaxed" style="margin: 0 200 0 0; text-align: left;"> 
-            Explore the jungle and save people from monster. Theme in java called javanology.
-          </p>
+        <div name="The Snake">
+          <h1 class="gradtext" style="padding-top: 100px;"> The Snake</h1> 
           <br>
-                <div class="tracking-wide leading-relaxed " style=" text-align: left;">
-                  <a href="" class="btn btn-outline-light">C#</a>
-                  <a href="" class="btn btn-outline-light">2D</a>
-                  <a href="" class="btn btn-outline-light">Unity</a>
-                  <a href="https://uzanlatif.itch.io/javanology-beta" class="btn btn-outline-light">Download</a>
-                </div>
-        </div>  
+          <div>
+            <div class ="d-flex justify-content-between">
+              <br>
+              <div style="width: 800px" id="snakeControl" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/SnakeZ1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/SnakeZ2.png" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#snakeControl" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#snakeControl" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <br>
+            </div>
+          </div>
+          <br>
 
-        <div class ="">
-          <div style="width: 400px" id="Javanology" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/Javanology.png" class="d-block w-100" alt="...">
+          <p class="" > Snake is the common name for a video game concept where the player maneuvers a line which grows in length, with the line itself being a primary obstacle. The concept originated in the 1976 arcade game Blockade, and the ease of implementing Snake has led to hundreds of versions (some of which have the word snake or worm in the title) for many platforms. After a variant was preloaded on Nokia mobile phones in 1998, there was a resurgence of interest in the snake concept as it found a larger audience.</p>
+          <br>
+          <div class=" ">
+            <a class="btn btn-outline-light">C#</a>
+            <a class="btn btn-outline-light">2D</a>
+            <a class="btn btn-outline-light">Unity</a>
+            <a href="https://github.com/uzanlatif/Snake_Z" class="btn btn-outline-primary">Github</a>
+            <br>
+          </div>
+        </div> 
+
+        
+        <div name="Jemparingan">
+          <h1 class="gradtext" style="padding-top: 100px;"> Jemparingan Archery VR</h1> 
+          <br>
+          <div>
+            <div class ="d-flex justify-content-between">
+              <br>
+              <div style="width: 800px" id="jemparinganControl" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/Jemparingan1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/Jemparingan2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/Jemparingan3.png" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#jemparinganControl" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#jemparinganControl" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
               </div>
-              <div class="carousel-item">
-                <img src="img/Javanology2.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/Javanology3gif.gif" class="d-block w-100" alt="...">
+              <br>
+            </div>
+            <p> Use your VR device and be a master. Relax, you cannot die in this game. </p>
+          <br>
+          <div class=" ">
+            <a class="btn btn-outline-light">C#</a>
+            <a class="btn btn-outline-light">VR</a>
+            <a class="btn btn-outline-light">Unity</a>
+            <br>
+          </div>
+          </div>
+          <br>
+
+          <div name="Starship">
+            <h1 class="gradtext" style="padding-top: 100px;">  Starship Battlefield</h1> 
+            <br>
+            <div>
+              <div class ="d-flex justify-content-between">
+                <br>
+                <div style="width: 800px" id="starshipControl" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/Starship1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Starship2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Starship3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#starshipControl" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#starshipControl" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Javanology" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Javanology" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <br>
+
+          <p> Explore galaxy, be the king of galaxy. Shoots aliens. Buy expensive weapons. Be the top of the leaderboards.</p>
+          <br>
+          <div class=" ">
+            <a class="btn btn-outline-light">C#</a>
+            <a class="btn btn-outline-light">2D</a>
+            <a class="btn btn-outline-light">Unity</a>
+            <a href="https://uzanlatif.itch.io/starship-battlefield" class="btn btn-outline-primary">Download</a>
+            <br>
           </div>
-        </div>    
+        </div>
+        
+        <br>
+
+        <div name="AdiwilagaArgani">
+          <h1 class="gradtext" style="padding-top: 100px;">  Adiwilaga Argani</h1> 
+          <br>
+          <div>
+            <div class ="d-flex justify-content-between">
+              <br>
+              <div style="width: 800px" id="javanology" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/Javanology.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/Javanology2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/Javanology3gif.gif" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#javanology" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#javanology" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <br>
+            </div>
+          </div>
+          <br>
+
+        <p> Explore the jungle and save people from monster. Theme in java called javanology.</p>
+        <br>
+        <div class=" ">
+          <a class="btn btn-outline-light">C#</a>
+          <a class="btn btn-outline-light">2D</a>
+          <a class="btn btn-outline-light">Unity</a>
+          <a href="https://uzanlatif.itch.io/javanology-beta" class="btn btn-outline-primary">Download</a>
+          <br>
+        </div>
       </div>
+
+      <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+        </script>
 
       </div>
               
