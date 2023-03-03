@@ -9,11 +9,16 @@ async function loadModel() {
     const predictionValue = await prediction.data();
     console.log("pred " + predictionValue);
     const predictedClassElement = document.createElement('h1');
-    
+    const predictTextElement = document.createElement('h1');
+
     const predictedClass = predictionValue[0] > 0.5? 'dog' : 'cat';
 
     predictedClassElement.innerText = `Predicted class: ${predictedClass}`;
+    predictTextElement.innerText = `Predicted value: ${predictionValue}`;
+
+    outputContainer.appendChild(predictTextElement);
     outputContainer.appendChild(predictedClassElement);
+    
   };
   img.src = URL.createObjectURL(inputElement.files[0]);
 }
