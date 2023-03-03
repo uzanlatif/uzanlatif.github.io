@@ -1,5 +1,5 @@
 async function loadModel() {
-  const modelUrl = 'model.json';
+  const modelUrl = 'theModel/model.json';
   const model = await tf.loadLayersModel(modelUrl);
 
   const inputElement = document.getElementById('input-image');
