@@ -4,7 +4,14 @@ async function loadModel() {
 
   const inputElement = document.getElementById('input-image');
   const img = new Image();
+
   img.onload = async () => {
+    // Show loading spinner
+    const loadingSpinner = document.getElementById('loading-spinner');
+    loadingSpinner.style.display = 'block';
+    const outputContainer = document.getElementById('output-container');
+    outputContainer.classList.add('loading');
+
     const prediction = model.predict(tf.expandDims(tf.image.resizeBilinear(tf.browser.fromPixels(img), [100, 100]), 0));
     const predictionValue = await prediction.data();
     console.log("pred " + predictionValue);
@@ -16,6 +23,10 @@ async function loadModel() {
     predictedClassElement.innerText = `Predicted class: ${predictedClass}`;
     predictTextElement.innerText = `Predicted value: ${predictionValue}`;
 
+    // Hide loading spinner
+    loadingSpinner.style.display = 'none';
+    outputContainer.classList.remove('loading');
+    
     outputContainer.appendChild(predictTextElement);
     outputContainer.appendChild(predictedClassElement);
     
