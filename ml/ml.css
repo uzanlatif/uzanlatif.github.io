@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+}
+h1{
+  color: white;
+}
+
+#content{
+    color: white;
+}
+
+#button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#input-image{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none; /* hide the default file input button */
+}
+  
+  .custom-file-upload {
+    border: 1px solid #4CAF50;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #e9e9e9;
+  }
