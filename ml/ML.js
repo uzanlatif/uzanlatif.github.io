@@ -12,16 +12,23 @@ async function loadModel() {
   const img = new Image();
 
   img.onload = async () => {
-    const prediction = model.predict(tf.expandDims(tf.image.resizeBilinear(tf.browser.fromPixels(img), [100, 100]), 0));
+    const prediction = model.predict(tf.expandDims(tf.image.resizeBilinear(tf.browser.fromPixels(img), [224, 224]), 0));
     const predictionValue = await prediction.data();
     console.log("pred " + predictionValue);
     const predictedClassElement = document.createElement('h1');
     const predictTextElement = document.createElement('h1');
 
-    const predictedClass = predictionValue[0] > 0.5? 'dog' : 'cat';
+    const classes = ['low', 'normal', 'high', 'very high'];
+    let maxIndex = 0;
+    for (let i = 1; i < predictionValue.length; i++) {
+      if (predictionValue[i] > predictionValue[maxIndex]) {
+        maxIndex = i;
+      }
+    }
+    const predictedClass = classes[maxIndex];
 
     predictedClassElement.innerText = `Predicted class: ${predictedClass}`;
-    predictTextElement.innerText = `Predicted value: ${predictionValue}`;
+    predictTextElement.innerText = `Prediction values: low - ${predictionValue[0]}, normal - ${predictionValue[1]}, high - ${predictionValue[2]}, very high - ${predictionValue[3]}`;
 
     // Hide loading spinner
     loadingSpinner.style.display = 'none';
