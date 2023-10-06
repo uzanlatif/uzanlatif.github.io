@@ -17,6 +17,7 @@ async function loadModel() {
     console.log("pred " + predictionValue);
     const predictedClassElement = document.createElement('h1');
     const predictTextElement = document.createElement('h1');
+    const confidenceElement = document.createElement('h2'); // Added for confidence percentage
 
     const classes = ['low', 'normal', 'high', 'very high'];
     let maxIndex = 0;
@@ -26,9 +27,11 @@ async function loadModel() {
       }
     }
     const predictedClass = classes[maxIndex];
+    const confidencePercentage = (predictionValue[maxIndex] * 100).toFixed(2); // Calculate confidence percentage
 
     predictedClassElement.innerText = `Predicted class: ${predictedClass}`;
     predictTextElement.innerText = `Prediction values: low - ${predictionValue[0]}, normal - ${predictionValue[1]}, high - ${predictionValue[2]}, very high - ${predictionValue[3]}`;
+    confidenceElement.innerText = `Confidence: ${confidencePercentage}%`; // Display confidence percentage
 
     // Hide loading spinner
     loadingSpinner.style.display = 'none';
@@ -36,7 +39,7 @@ async function loadModel() {
 
     outputContainer.appendChild(predictTextElement);
     outputContainer.appendChild(predictedClassElement);
-    
+    outputContainer.appendChild(confidenceElement); // Append confidence element
   };
   img.src = URL.createObjectURL(inputElement.files[0]);
 }

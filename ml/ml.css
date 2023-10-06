@@ -1,55 +1,95 @@
-body{
-    background-color: black;
-}
-h1{
-  color: white;
-}
-
-#content{
-    color: white;
+/* Reset some default styles */
+body {
+  background-color: blue;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-#button{
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 7px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
+h1 {
+  color: #8ECDDD; /* Dark gray text */
+  text-align: center;
+  padding: 20px;
 }
 
-#input-image{
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#content {
+  color: #333; /* Dark gray text */
+  text-align: center;
+  margin-top: 20px;
+}
+
+#button, #input-image { /* Green button */
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#input-image {
+  padding: 15px 32px;
+}
+
+#input-image::file-selector-button {
+  background-color: #8ECDDD; /* Change to your desired button color */
+  color: #fff; /* Change to your desired text color */
+  border: 1px solid #8ECDDD; /* Add border if desired */
+  border-radius: 5px; /* Add border radius if desired */
+  padding: 5px 10px; /* Add padding if desired */
+  cursor: pointer; /* Change cursor style if desired */
 }
 
 input[type="file"] {
-    display: none; /* hide the default file input button */
+  display: none;
 }
-  
-  .custom-file-upload {
-    border: 1px solid #4CAF50;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 4px;
-  }
-  
-  .custom-file-upload:hover {
-    background-color: #e9e9e9;
-  }
+
+.custom-file-upload {
+  border: 2px solid #4CAF50; /* Green border */
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #4CAF50;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #4CAF50; /* Green background on hover */
+  color: #FFFADD;
+}
+
+#myBox{
+    border-radius: 25px;
+    width: 600px;
+    height: 600px;
+    background-color: #FFCC70;
+    font-size: 16px;
+}
+
+#loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.predict{
+  background-color: #8ECDDD; /* Change to your desired button color */
+  color: #fff; /* Change to your desired text color */
+  border: 1px solid #8ECDDD; /* Add border if desired */
+  border-radius: 5px; /* Add border radius if desired */
+  padding: 5px 10px; /* Add padding if desired */
+  cursor: pointer; /* Change cursor style if desired */
+}
