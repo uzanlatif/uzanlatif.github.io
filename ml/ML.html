@@ -9,7 +9,7 @@
   <body>
     <center>
       <div id="myBox" class="text-center">
-        <h1>BODY FAT MEASUREMENT</h1>
+        <h1 style="font-size: 40px; font-weight: bold;">BODY FAT MEASUREMENT</h1>
         <form id="image-form">
           <img id="selected-image" src="" alt="Selected Image" class="container" style="width: 200px; display:none;">
           <input type="file" id="input-image" accept="image/*,.heic">
@@ -47,17 +47,25 @@
               maxIndex = i;
             }
           }
-          const predictedClass = classes[maxIndex];
           const confidencePercentage = (predictionValue[maxIndex] * 100).toFixed(2);
 
-          const predictedClassElement = document.createElement('h1');
-          predictedClassElement.innerText = `Predicted class: ${predictedClass}`;
+          if (confidencePercentage === '100.00') {
+            const errorElement = document.createElement('h3');
+            errorElement.innerText = 'Error - Gambar tidak sesuai';
+            outputContainer.innerHTML = ''; // Clear any previous content
+            outputContainer.appendChild(errorElement);
+          } else {
+            const predictedClass = classes[maxIndex];
+            const predictedClassElement = document.createElement('h1');
+            predictedClassElement.innerText = `Predicted class: ${predictedClass}`;
 
-          const confidenceElement = document.createElement('h2');
-          confidenceElement.innerText = `Confidence: ${confidencePercentage}%`;
-          outputContainer.innerHTML = '';
-          outputContainer.appendChild(predictedClassElement);
-          outputContainer.appendChild(confidenceElement);
+            const confidenceElement = document.createElement('h2');
+            confidenceElement.innerText = `Confidence: ${confidencePercentage}%`;
+
+            outputContainer.innerHTML = ''; // Clear any previous content
+            outputContainer.appendChild(predictedClassElement);
+            outputContainer.appendChild(confidenceElement);
+          }
         };
 
         img.src = URL.createObjectURL(inputElement.files[0]);
@@ -68,7 +76,6 @@
         event.preventDefault();
         loadModel();
       });
-
     </script>
   </body>
 </html>

@@ -1,95 +1,76 @@
 /* Reset some default styles */
 body {
-  background-color: blue;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  text-align: center; /* Center content */
+}
+
+#myBox {
+  border-radius: 15px;
+  width: 80%;
+  max-width: 400px; /* Set a maximum width for better readability */
+  background-color: #E5D4FF;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for the box */
+  margin: 0 auto; /* Center the box horizontally */
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
-  color: #8ECDDD; /* Dark gray text */
-  text-align: center;
-  padding: 20px;
+  color: red; /* Blue heading */
+  font-size: 30px; /* Larger font size for the heading */
+  margin-bottom: 20px;
 }
 
-#content {
-  color: #333; /* Dark gray text */
-  text-align: center;
-  margin-top: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#button, #input-image { /* Green button */
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 4px;
+#selected-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/*browse*/
+#input-image {
+  margin-bottom: 10px;
+  color: black; /* Change the text color to blue */
+  background-color: #F1EAFF; /* Change the background color on hover (optional) */
+  border: 2px solid #D0A2F7; /* Add a blue border (optional) */
+  border-radius: 5px; /* Add rounded corners (optional) */
+  padding: 5px; /* Adjust padding for better appearance (optional) */
+  cursor: pointer; /* Show a pointer cursor on hover */
   transition: background-color 0.3s ease;
 }
 
-#input-image {
-  padding: 15px 32px;
+#input-image:hover {
+  background-color: #D0A2F7; /* Change the background color on hover (optional) */
+  color: white; /* Change the text color on hover (optional) */
 }
 
-#input-image::file-selector-button {
-  background-color: #8ECDDD; /* Change to your desired button color */
-  color: #fff; /* Change to your desired text color */
-  border: 1px solid #8ECDDD; /* Add border if desired */
-  border-radius: 5px; /* Add border radius if desired */
-  padding: 5px 10px; /* Add padding if desired */
-  cursor: pointer; /* Change cursor style if desired */
-}
-
-input[type="file"] {
-  display: none;
-}
-
-.custom-file-upload {
-  border: 2px solid #4CAF50; /* Green border */
-  display: inline-block;
+button.btn-success {
+  background-color: #D0A2F7; 
+  color: #fff;
   padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  background-color: transparent;
-  color: #4CAF50;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.custom-file-upload:hover {
-  background-color: #4CAF50; /* Green background on hover */
-  color: #FFFADD;
+button.btn-success:hover {
+  background-color: #F1EAFF;
 }
 
-#myBox{
-    border-radius: 25px;
-    width: 600px;
-    height: 600px;
-    background-color: #FFCC70;
-    font-size: 16px;
+#output-container {
+  margin-top: 20px;
 }
 
-#loading-spinner {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.loading {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.predict{
-  background-color: #8ECDDD; /* Change to your desired button color */
-  color: #fff; /* Change to your desired text color */
-  border: 1px solid #8ECDDD; /* Add border if desired */
-  border-radius: 5px; /* Add border radius if desired */
-  padding: 5px 10px; /* Add padding if desired */
-  cursor: pointer; /* Change cursor style if desired */
+h2 {
+  font-size: 18px; /* Larger font size for confidence text */
+  color: #666; /* Slightly darker text color */
 }
