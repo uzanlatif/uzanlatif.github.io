@@ -1,25 +1,24 @@
-/* Reset some default styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  text-align: center; /* Center content */
+  text-align: center;
 }
 
 #myBox {
   border-radius: 15px;
   width: 80%;
-  max-width: 400px; /* Set a maximum width for better readability */
+  max-width: 400px;
   background-color: #E5D4FF;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for the box */
-  margin: 0 auto; /* Center the box horizontally */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
 
 h1 {
-  color: red; /* Blue heading */
-  font-size: 30px; /* Larger font size for the heading */
+  color: red;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
@@ -38,18 +37,18 @@ form {
 /*browse*/
 #input-image {
   margin-bottom: 10px;
-  color: black; /* Change the text color to blue */
-  background-color: #F1EAFF; /* Change the background color on hover (optional) */
-  border: 2px solid #D0A2F7; /* Add a blue border (optional) */
-  border-radius: 5px; /* Add rounded corners (optional) */
-  padding: 5px; /* Adjust padding for better appearance (optional) */
-  cursor: pointer; /* Show a pointer cursor on hover */
+  color: black; 
+  background-color: #F1EAFF;
+  border: 2px solid #D0A2F7;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 #input-image:hover {
-  background-color: #D0A2F7; /* Change the background color on hover (optional) */
-  color: white; /* Change the text color on hover (optional) */
+  background-color: #D0A2F7;
+  color: white;
 }
 
 button.btn-success {
@@ -71,6 +70,6 @@ button.btn-success:hover {
 }
 
 h2 {
-  font-size: 18px; /* Larger font size for confidence text */
-  color: #666; /* Slightly darker text color */
+  font-size: 18px;
+  color: #666;
 }

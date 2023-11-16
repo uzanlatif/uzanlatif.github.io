@@ -40,7 +40,7 @@
           const prediction = model.predict(tensor);
           const predictionValue = await prediction.data();
 
-          const classes = ['low', 'normal', 'high', 'very high'];
+          const classes = ['Athletes', 'Fitness', 'Acceptable', 'Obese'];
           let maxIndex = 0;
           for (let i = 1; i < predictionValue.length; i++) {
             if (predictionValue[i] > predictionValue[maxIndex]) {
@@ -52,7 +52,7 @@
           if (confidencePercentage === '100.00') {
             const errorElement = document.createElement('h3');
             errorElement.innerText = 'Error - Gambar tidak sesuai';
-            outputContainer.innerHTML = ''; // Clear any previous content
+            outputContainer.innerHTML = '';
             outputContainer.appendChild(errorElement);
           } else {
             const predictedClass = classes[maxIndex];
@@ -62,7 +62,7 @@
             const confidenceElement = document.createElement('h2');
             confidenceElement.innerText = `Confidence: ${confidencePercentage}%`;
 
-            outputContainer.innerHTML = ''; // Clear any previous content
+            outputContainer.innerHTML = '';
             outputContainer.appendChild(predictedClassElement);
             outputContainer.appendChild(confidenceElement);
           }
