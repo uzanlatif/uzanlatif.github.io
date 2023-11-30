@@ -9,7 +9,7 @@
   <body>
     <center>
       <div id="myBox" class="text-center">
-        <h1 style="font-size: 40px; font-weight: bold;">BODY FAT CLASSIFICATION</h1>
+        <h1 style="font-size: 40px; font-weight: bold;">BODY FAT MEASUREMENT</h1>
         <form id="image-form">
           <img id="selected-image" src="" alt="Selected Image" class="container" style="width: 200px; display:none;">
           <input type="file" id="input-image" accept="image/*,.heic">
@@ -32,11 +32,26 @@
         const img = new Image();
 
         img.onload = async () => {
-          // Display the selected image
-          selectedImageElement.src = URL.createObjectURL(inputElement.files[0]);
+          // Convert the image to grayscale
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = 224;
+          canvas.height = 224;
+          ctx.drawImage(img, 0, 0, 224, 224);
+          const imageData = ctx.getImageData(0, 0, 224, 224);
+          for (let i = 0; i < imageData.data.length; i += 4) {
+            const gray = Math.round(0.299 * imageData.data[i] + 0.587 * imageData.data[i + 1] + 0.114 * imageData.data[i + 2]);
+            imageData.data[i] = gray;
+            imageData.data[i + 1] = gray;
+            imageData.data[i + 2] = gray;
+          }
+          ctx.putImageData(imageData, 0, 0);
+
+          // Display the selected grayscale image
+          selectedImageElement.src = canvas.toDataURL();
           selectedImageElement.style.display = 'block';
 
-          const tensor = tf.browser.fromPixels(img).resizeBilinear([224, 224]).expandDims(0);
+          const tensor = tf.browser.fromPixels(canvas).resizeBilinear([224, 224]).expandDims(0);
           const prediction = model.predict(tensor);
           const predictionValue = await prediction.data();
 
