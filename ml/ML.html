@@ -29,6 +29,12 @@
         const model = await tf.loadLayersModel(modelUrl);
 
         const inputElement = document.getElementById('input-image');
+        if (!inputElement.files || inputElement.files.length === 0) {
+          // Handle the case where no file is selected
+          outputContainer.innerHTML = '<p style="color: red;">Please select an image.</p>';
+          return;
+        }
+
         const img = new Image();
 
         img.onload = async () => {
@@ -64,6 +70,12 @@
           }
 
           const confidencePercentage = (predictionValue[maxIndex] * 100).toFixed(2);
+
+          if (confidencePercentage === '100.00') {
+            // Handle the case where confidence is 100%
+            outputContainer.innerHTML = '<p style="color: red;">The model cannot recognize the image.</p>';
+            return;
+          }
 
           const predictedClass = classes[maxIndex];
           const predictedClassElement = document.createElement('h1');
