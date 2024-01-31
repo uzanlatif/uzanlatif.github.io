@@ -5,7 +5,7 @@ async function loadModel() {
   const outputContainer = document.getElementById('output-container');
   outputContainer.classList.add('loading');
 
-  const modelUrl = 'theModel/model.json';
+  const modelUrl = 'theModel/fixModel/model.json';
   const model = await tf.loadLayersModel(modelUrl);
 
   const inputElement = document.getElementById('input-image');
@@ -19,7 +19,7 @@ async function loadModel() {
     const predictTextElement = document.createElement('h1');
     const confidenceElement = document.createElement('h2'); // Added for confidence percentage
 
-    const classes = ['low', 'normal', 'high', 'very high'];
+    const classes = ['Athletes', 'Fitness', 'Acceptable', 'Obese'];
     let maxIndex = 0;
     for (let i = 1; i < predictionValue.length; i++) {
       if (predictionValue[i] > predictionValue[maxIndex]) {
