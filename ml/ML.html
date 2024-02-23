@@ -62,7 +62,7 @@
           const prediction = model.predict(tensor);
           const predictionValue = await prediction.data();
 
-          const classes = ['Athletes', 'Fitness', 'Acceptable', 'Obese'];
+          const classes = ['Essential Fat/Athletes', 'Fitness', 'Acceptable', 'Obese'];
           let maxIndex = 0;
           for (let i = 1; i < predictionValue.length; i++) {
             if (predictionValue[i] > predictionValue[maxIndex]) {
